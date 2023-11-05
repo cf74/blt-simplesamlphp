@@ -169,7 +169,7 @@ class SimpleSamlPhpCommand extends BltTasks {
     $this->say("Creating a symbolic link from ${docroot}/simplesaml to web accessible directory in the simplesamlphp library...");
     $result = $this->taskFilesystemStack()
       //phpcs:ignore
-      ->symlink("../vendor/simplesamlphp/simplesamlphp/www", "${docroot}/simplesaml")
+      ->symlink("../vendor/simplesamlphp/simplesamlphp/public", "${docroot}/simplesaml")
       ->setVerbosityThreshold(VerbosityThresholdInterface::VERBOSITY_VERBOSE)
       ->run();
 
